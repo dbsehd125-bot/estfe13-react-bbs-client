@@ -21,7 +21,7 @@ export default function Write({ isModifyMode, boardId, handleCancel }) {
     if (isModifyMode && boardId) {
       //boardId로 서버에 글 조회, 조회결과로 content 업데이트
       axios
-        .get(`http://localhost:3000/view?id=${boardId}`)
+        .get(`${API_URL}/view?id=${boardId}`)
         .then(response => {
           console.log(response.data); //[{..}]
           //setContent(response.data);
